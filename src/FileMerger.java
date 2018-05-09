@@ -68,7 +68,6 @@ public class FileMerger {
         file = scan.next();
         input_path_2 = settingPath(file);
         
-        scan.close();
     }
     
     //reads file byte-by-byte
@@ -113,10 +112,8 @@ public class FileMerger {
         Scanner scan = new Scanner(System.in);
         file = scan.next();
         String path = settingPath(file);
-        scan.close();
         
         writeFileBytes(out_file,path);
-        
     }
     
     //constructor

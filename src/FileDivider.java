@@ -84,7 +84,6 @@ public class FileDivider {
         Scanner scan = new Scanner(System.in);
         file = scan.next();
         input_path = settingPath(file);
-        scan.close();
     }
     
     //reads file byte-by-byte
@@ -119,18 +118,19 @@ public class FileDivider {
         }
         
         String output_path;
-        Scanner scan = new Scanner(System.in);
-        
+        String path_1="";
+        String path_2="";
+       
         System.out.println("Copy and paste the path for the first part of the file:");
+        Scanner scan = new Scanner(System.in);
         output_path = scan.next();
-        String path_1 = settingPath(output_path);
+        path_1 = settingPath(output_path);
+      
         
         System.out.println("Copy and paste the path for the second part of the file:");
         output_path = scan.next();
-        String path_2 = settingPath(output_path);
-        
-        scan.close();
-        
+        path_2 = settingPath(output_path);
+           
         writeFileBytes(output_1,path_1);
         writeFileBytes(output_2,path_2);
         

@@ -107,7 +107,7 @@ public class FileDivider {
         byte[] output_2 = new byte[file_len/2];
         int counter_1 = 0;
         int counter_2 = 0;
-        for(int i=0; i<input_file.length; i++){
+        for(int i=0; i < input_file.length; i++){
             if(i%2==0){
                 output_1[counter_1] = input_file[i];
                 counter_1++;
